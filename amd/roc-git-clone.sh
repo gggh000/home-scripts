@@ -1,5 +1,4 @@
 
-
 GITHUB_URL_ROC=(\
 "https://github-url.com/RadeonOpenCompute/ROCm.git" \
 "https://github-url.com/RadeonOpenCompute/ROCm-docker.git" \
@@ -32,8 +31,46 @@ https://github.com/baidu-research/DeepBench.git \
 
 )
 
+mkdir roc
+cd roc
+
+for i in ${GITHUB_URL_ROC[@]}
+do
+	echo "git cloning ${i}..."
+	git clone ${i}
+done
+
+cd ..
+mkdir rocm
+cd rocm
+
+for i in ${GITHUB_URL_ROCM[@]}
+do
+	echo "git cloning ${i}..."
+	git clone ${i}
+done
+
+cd ..
+mkdir non-amd 
+cd non-amd
+
 for i in ${GITHUB_URL_NON_AMD[@]}
 do
 	echo "git cloning ${i}..."
 	git clone ${i}
 done
+
+cd ..
+mkdir benchmarks
+cd benchmarks
+
+for i in ${GITHUB_URL_BENCHMARKS[@]}
+do
+	echo "git cloning ${i}..."
+	git clone ${i}
+done
+cd ..
+ls -ltr
+
+
+
