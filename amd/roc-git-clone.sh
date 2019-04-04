@@ -24,6 +24,7 @@ https://github.com/xianyi/OpenBLAS.git \
 https://github.com/tensorflow/tensorflow \
 https://github.com/pytorch/pytorch.git \
 https://github.com/pytorch/caffe2.github.io.git \
+https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks \
 )
 
 GITHUB_URL_BENCHMARKS=(\
