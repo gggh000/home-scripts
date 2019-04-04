@@ -17,6 +17,7 @@ https://github.com/ROCmSoftwarePlatform/tensorflow-upstream.git \
 https://github.com/ROCmSoftwarePlatform/pytorch.git \
 https://github.com/ROCmSoftwarePlatform/hipBLAS.git \
 https://github.com/ROCmSoftwarePlatform/hipCaffe.git \
+https://github.com/ROCmSoftwarePlatform/benchmarks \
 )
 
 GITHUB_URL_NON_AMD=(\
