@@ -1,4 +1,3 @@
-
 GITHUB_URL_ROC=(\
 "https://github-url.com/RadeonOpenCompute/ROCm.git" \
 "https://github-url.com/RadeonOpenCompute/ROCm-docker.git" \
@@ -25,12 +24,11 @@ https://github.com/xianyi/OpenBLAS.git \
 https://github.com/tensorflow/tensorflow \
 https://github.com/pytorch/pytorch.git \
 https://github.com/pytorch/caffe2.github.io.git \
-https://github.com/tensorflow/benchmarks/tree/master/scripts/tf_cnn_benchmarks \
+https://github.com/tensorflow/benchmarks.git \
 )
 
 GITHUB_URL_BENCHMARKS=(\
 https://github.com/baidu-research/DeepBench.git \
-
 )
 
 mkdir roc
