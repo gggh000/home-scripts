@@ -10,13 +10,7 @@ do
 	python tf_cnn_benchmarks.py --num_gpus=1 --batch_size=32 --model=$i --variable_update=parameter_server > $i.log
 done
 
-
-
-
-
-
-
-
+egrep "model:|total images" *.log
 
 
 
