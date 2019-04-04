@@ -1,6 +1,6 @@
 GITHUB_URL_ROC=(\
-"https://github-url.com/RadeonOpenCompute/ROCm.git" \
-"https://github-url.com/RadeonOpenCompute/ROCm-docker.git" \
+"https://github.com/RadeonOpenCompute/ROCm.git" \
+"https://github.com/RadeonOpenCompute/ROCm-docker.git" \
 "https://github.com/RadeonOpenCompute/ROCK-Kernel-Driver.git" \
 "https://github.com/RadeonOpenCompute/ROCm_Documentation.git" \
 "https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface.git" \
@@ -17,6 +17,7 @@ https://github.com/ROCmSoftwarePlatform/pytorch.git \
 https://github.com/ROCmSoftwarePlatform/hipBLAS.git \
 https://github.com/ROCmSoftwarePlatform/hipCaffe.git \
 https://github.com/ROCmSoftwarePlatform/benchmarks \
+https://github.com/ROCmSoftwarePlatform/DeepBench.git \
 )
 
 GITHUB_URL_NON_AMD=(\
@@ -36,8 +37,12 @@ cd roc
 
 for i in ${GITHUB_URL_ROC[@]}
 do
-	echo "git cloning ${i}..."
-	git clone ${i}
+        if [[ ! -f $i ]] ; then
+                echo "-- git cloning ${i}..."
+                git clone ${i}
+        else
+                echo "-- already checked out..."
+        fi
 done
 
 cd ..
@@ -46,9 +51,15 @@ cd rocm
 
 for i in ${GITHUB_URL_ROCM[@]}
 do
-	echo "git cloning ${i}..."
-	git clone ${i}
+        if [[ ! -f $i ]] ; then
+                echo "-- git cloning ${i}..."
+                git clone ${i}
+        else
+                echo "-- already checked out..."
+        fi
 done
+
+exit
 
 cd ..
 mkdir non-amd 
