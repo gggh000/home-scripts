@@ -26,6 +26,7 @@ https://github.com/tensorflow/tensorflow \
 https://github.com/pytorch/pytorch.git \
 https://github.com/pytorch/caffe2.github.io.git \
 https://github.com/tensorflow/benchmarks.git \
+https://github.com/baidu-research/DeepBench \
 )
 
 GITHUB_URL_BENCHMARKS=(\
@@ -58,8 +59,6 @@ do
                 echo "-- already checked out..."
         fi
 done
-
-exit
 
 cd ..
 mkdir non-amd 
