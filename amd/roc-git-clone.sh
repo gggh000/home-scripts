@@ -1,9 +1,10 @@
 GITHUB_URL_ROC=(\
-"https://github.com/RadeonOpenCompute/ROCm.git" \
-"https://github.com/RadeonOpenCompute/ROCm-docker.git" \
-"https://github.com/RadeonOpenCompute/ROCK-Kernel-Driver.git" \
-"https://github.com/RadeonOpenCompute/ROCm_Documentation.git" \
-"https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface.git" \
+https://github.com/RadeonOpenCompute/ROCm.git \
+https://github.com/RadeonOpenCompute/ROCm-docker.git \
+https://github.com/RadeonOpenCompute/ROCK-Kernel-Driver.git \
+https://github.com/RadeonOpenCompute/ROCm_Documentation.git \
+https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface.git \
+https://github.com/RadeonOpenCompute/clang.git \
 )
 
 GITHUB_URL_ROCM=(\
@@ -26,10 +27,12 @@ https://github.com/tensorflow/tensorflow \
 https://github.com/pytorch/pytorch.git \
 https://github.com/pytorch/caffe2.github.io.git \
 https://github.com/tensorflow/benchmarks.git \
+https://github.com/baidu-research/DeepBench.git \
+https://github.com/llvm/llvm-project.git \
 )
 
-GITHUB_URL_BENCHMARKS=(\
-https://github.com/baidu-research/DeepBench.git \
+GITHUB_ROCM_DEVTOOLS_AMD=(\
+https://github.com/ROCm-Developer-Tools/HIP \
 )
 
 mkdir roc
@@ -59,8 +62,6 @@ do
         fi
 done
 
-exit
-
 cd ..
 mkdir non-amd 
 cd non-amd
@@ -72,16 +73,11 @@ do
 done
 
 cd ..
-mkdir benchmarks
-cd benchmarks
+mkdir rocm-devtools 
+cd rocm-devtools
 
-for i in ${GITHUB_URL_BENCHMARKS[@]}
+for i in ${GITHUB_ROCM_DEVTOOLS_AMD[@]}
 do
 	echo "git cloning ${i}..."
 	git clone ${i}
 done
-cd ..
-ls -ltr
-
-
-
