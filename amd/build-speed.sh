@@ -1,5 +1,6 @@
 if [[ -z $1 ]] ; then
 	echo "ERROR: PARAMETER 1  is empty"
+	exit 1
 fi
 START1=`echo $SECONDS`
 echo Building using the command: $1 $2 $3 $4
