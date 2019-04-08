@@ -29,6 +29,7 @@ https://github.com/pytorch/caffe2.github.io.git \
 https://github.com/tensorflow/benchmarks.git \
 https://github.com/baidu-research/DeepBench.git \
 https://github.com/llvm/llvm-project.git \
+https://github.com/mlperf/training.git \
 )
 
 GITHUB_ROCM_DEVTOOLS_AMD=(\
