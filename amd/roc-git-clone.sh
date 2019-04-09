@@ -35,6 +35,9 @@ GITHUB_ROCM_DEVTOOLS_AMD=(\
 https://github.com/ROCm-Developer-Tools/HIP \
 )
 
+GITHUB_GPUOPEN_AMD=(\
+https://github.com/GPUOpen-LibrariesAndSDKs/MxGPU-Virtualization \
+)
 mkdir roc
 cd roc
 
@@ -81,3 +84,15 @@ do
 	echo "git cloning ${i}..."
 	git clone ${i}
 done
+
+
+cd ..
+mkdir gpuopen 
+cd gpuopen
+
+for i in ${GITHUB_GPUOPEN_AMD[@]}
+do
+	echo "git cloning ${i}..."
+	git clone ${i}
+done
+
