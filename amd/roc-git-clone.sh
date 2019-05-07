@@ -5,7 +5,7 @@ https://github.com/RadeonOpenCompute/ROCK-Kernel-Driver.git \
 https://github.com/RadeonOpenCompute/ROCm_Documentation.git \
 https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface.git \
 https://github.com/RadeonOpenCompute/clang.git \
-)
+https://github.com/RadeonOpenCompute/rocminfo.git)
 
 GITHUB_URL_ROCM=(\
 https://github.com/ROCmSoftwarePlatform/MIOpen.git \
@@ -39,6 +39,11 @@ https://github.com/ROCm-Developer-Tools/HIP \
 GITHUB_GPUOPEN_AMD=(\
 https://github.com/GPUOpen-LibrariesAndSDKs/MxGPU-Virtualization \
 )
+
+GITHUB_GPUOPEN_DRIVERS_AMD=(\
+https://github.com/GPUOpen-Drivers/AMDVLK \
+)
+
 mkdir roc
 cd roc
 
@@ -92,6 +97,17 @@ mkdir gpuopen
 cd gpuopen
 
 for i in ${GITHUB_GPUOPEN_AMD[@]}
+do
+	echo "git cloning ${i}..."
+	git clone ${i}
+done
+
+cd ..
+
+mkdir gpuopen-drivers
+cd gpuopen-drivers
+
+for i in ${GITHUB_GPUOPEN_DRIVERS_AMD[@]}
 do
 	echo "git cloning ${i}..."
 	git clone ${i}
