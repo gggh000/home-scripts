@@ -36,6 +36,7 @@ https://github.com/llvm-mirror/clang.git \
 GITHUB_ROCM_DEVTOOLS_AMD=(\
 https://github.com/ROCm-Developer-Tools/HIP \
 https://github.com/ROCm-Developer-Tools/HIP-Examples.git \
+https://github.com/ROCm-Developer-Tools/rocr_debug_agent \
 )
 
 GITHUB_GPUOPEN_AMD=(\
