@@ -6,6 +6,7 @@ https://github.com/RadeonOpenCompute/ROCm_Documentation.git \
 https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface.git \
 https://github.com/RadeonOpenCompute/clang.git \
 https://github.com/RadeonOpenCompute/rocminfo.git)
+https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime.git
 
 GITHUB_URL_ROCM=(\
 https://github.com/ROCmSoftwarePlatform/MIOpen.git \
