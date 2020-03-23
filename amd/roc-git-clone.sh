@@ -47,6 +47,7 @@ https://github.com/GPUOpen-LibrariesAndSDKs/MxGPU-Virtualization \
 
 GITHUB_GPUOPEN_DRIVERS_AMD=(\
 https://github.com/GPUOpen-Drivers/AMDVLK \
+https://github.com/KhronosGroup/Vulkan-Loader.git \
 )
 
 mkdir roc
